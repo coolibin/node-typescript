@@ -1,5 +1,5 @@
-import express, {NextFunction} from 'express'
-import todoRoutes from "./routes/todo.js";
+import express, {type Request, type Response, type NextFunction} from 'express'
+import todoRoutes from "./routes/todo.ts";
 
 const app = express()
 
