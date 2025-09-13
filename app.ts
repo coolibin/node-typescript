@@ -7,8 +7,7 @@ app.use(express.json()) // for parsing json requests
 
 app.use(todoRoutes) // registering routers
 
-app.use(o => {
-    const res = o.res!
+app.use((err: Error, req: Request, res: Response, _: NextFunction) => {
     res.status(500).json({message: 'An error occurred!'})
 })
 
