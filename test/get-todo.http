@@ -1,0 +1,5 @@
+### GET request to example server
+GET http://localhost:3000/todos/0.3509425417177444
+Content-Type: application/json
+
+###

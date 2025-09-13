@@ -1,10 +1,15 @@
-import express from 'express'
+import express, {NextFunction} from 'express'
+import todoRoutes from "./routes/todo.js";
 
 const app = express()
 
-app.get('/', (req: express.Request, res: express.Response) => {
-    console.log(req.method)
-    res.json({message: 'Hello World!'})
+app.use(express.json()) // for parsing json requests
+
+app.use(todoRoutes) // registering routers
+
+app.use(o => {
+    const res = o.res!
+    res.status(500).json({message: 'An error occurred!'})
 })
 
 app.listen(3000)

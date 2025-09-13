@@ -1,0 +1,8 @@
+### GET request to example server
+PATCH http://localhost:3000/todos/0.3509425417177444
+Content-Type: application/json
+
+{
+  "text": "Updated!"
+}
+###
